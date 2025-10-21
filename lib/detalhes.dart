@@ -130,97 +130,98 @@ class _DetalhesState extends State<Detalhes> {
       ),
       body: SingleChildScrollView(
         child: Container(
-        color: Color(0xff14181c),
-        child: Center(
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(16),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: CircleBorder(),
-                        padding: EdgeInsets.all(16),
-                        backgroundColor: Color(0xff00c030),
-                        foregroundColor: Colors.white,
+          constraints: BoxConstraints(minHeight: MediaQuery.of(context).size.height),
+          color: Color(0xff14181c),
+          child: Center(
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(16),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(16),
+                          backgroundColor: Color(0xff00c030),
+                          foregroundColor: Colors.white,
+                        ),
+                        child: Icon(Icons.arrow_back),
                       ),
-                      child: Icon(Icons.arrow_back),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 25),
+                    child: Column(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 3),
+                            borderRadius: BorderRadius.circular(20),
+                            color: Color(0xff14181c),
+                          ),
+                          width: 300,
+                          height: 500,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(17),
+                              bottom: Radius.circular(17),
+                            ),
+                            child: imagemFilme(),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 15),
+                          child: Text(
+                            titulo,
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Nota TMDB: ${nota.toStringAsFixed(1)}",
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Bilheteria: U\$ ${bilheteria.toString()}",
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Custo: U\$ ${orcamento.toString()}",
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 10, right: 15, left: 15),
+                          child: Text(
+                            "Sinopse: $descricao",
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 25),
-                  child: Column(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white, width: 3),
-                          borderRadius: BorderRadius.circular(20),
-                          color: Color(0xff14181c),
-                        ),
-                        width: 300,
-                        height: 500,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.vertical(
-                            top: Radius.circular(17),
-                            bottom: Radius.circular(17),
-                          ),
-                          child: imagemFilme(),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 15),
-                        child: Text(
-                          titulo,
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 10),
-                        child: Text(
-                          "Nota TMDB: ${nota.toStringAsFixed(1)}",
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 10),
-                        child: Text(
-                          "Bilheteria: U\$ ${bilheteria.toString()}",
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 10),
-                        child: Text(
-                          "Custo: U\$ ${orcamento.toString()}",
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 10, right: 15, left: 15),
-                        child: Text(
-                          "Sinopse: $descricao",
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
             ),
-          ),
+          )
         )
-      )
-    );
+      );
+    }
   }
-}
