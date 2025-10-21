@@ -128,10 +128,11 @@ class _DetalhesState extends State<Detalhes> {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          constraints: BoxConstraints(minHeight: MediaQuery.of(context).size.height),
-          color: Color(0xff14181c),
+      body: Container(
+        constraints: BoxConstraints(
+        minHeight: MediaQuery.of(context).size.height),
+        color: Color(0xff14181c),
+        child: SingleChildScrollView(
           child: Center(
             child: Column(
               children: [
@@ -140,7 +141,7 @@ class _DetalhesState extends State<Detalhes> {
                     Padding(
                       padding: EdgeInsets.all(16),
                       child: ElevatedButton(
-                        onPressed: () {
+                        onPressed: (){
                           Navigator.pop(context);
                         },
                         style: ElevatedButton.styleFrom(
