@@ -1,0 +1,10 @@
+*.dart linguist-language=Dart
+*.cmake linguist-detectable=false
+CMakeLists.txt linguist-detectable=false
+*.cpp linguist-detectable=false
+*.cc linguist-detectable=false
+*.h linguist-detectable=false
+*.swift linguist-detectable=false
+*.g.dart linguist-generated=true
+*.freezed.dart linguist-generated=true
+*.html linguist-detectable=false
