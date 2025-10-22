@@ -14,6 +14,7 @@ class ResultadoBusca extends StatefulWidget {
 class _ResultadoBuscaState extends State<ResultadoBusca> {
 
   Map<String, dynamic> filmes = {};
+  //Coloque a sua Api Key gerada abaixo (entre as aspas)
   String apiKey = "";
 
   Future<Map<String, dynamic>> dadosRecebidos() async {
@@ -55,9 +56,12 @@ class _ResultadoBuscaState extends State<ResultadoBusca> {
           title: Text("Buscador de filmes"),
           backgroundColor: Color(0xff14181c),
         ),
-        body: Center(
-          child: CircularProgressIndicator(),
-        ),
+        body: Container(
+          color: Color(0xff14181c),
+          child: Center(
+            child: CircularProgressIndicator(),
+          )
+        )
       );
     }
 

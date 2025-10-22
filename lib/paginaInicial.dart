@@ -14,6 +14,7 @@ class PaginaInicial extends StatefulWidget {
 class _PaginaInicialState extends State<PaginaInicial> {
 
   Map<String, dynamic> filmes = {};
+  //Coloque a sua Api Key gerada abaixo (entre as aspas)
   String apiKey = "";
 
   Future<Map<String, dynamic>> dadosRecebidos() async {
