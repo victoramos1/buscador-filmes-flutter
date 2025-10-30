@@ -1,5 +1,6 @@
 <h1>Projeto: Buscador de Filmes</h1>
 
+![App em funcionamento](imagens/buscador-de-filmes.gif)
 
 <h2>Descrição do projeto</h2>
 
@@ -34,6 +35,7 @@
 <h2>Status do projeto</h2>
 
 <p>Versão 1.0.0 finalizada.</p>
+
 
 
 
